@@ -1,3 +1,148 @@
+# 🎓 CLASES-G1
+
+Bienvenido al repositorio **CLASES-G1** — un espacio para organizar materiales, ejercicios y recursos de la asignatura.
+
+---
+
+## 📌 Descripción
+
+Resumen corto y útil del proyecto. Coloca aquí el propósito del repositorio, por ejemplo:
+
+- Material de clases y ejercicios.
+- Recursos y apuntes por temática.
+- Plantillas y ejemplos para prácticas.
+
+## 🚦 Estado
+
+- Estado: **En desarrollo**
+- Última actualización: 2025-12-14
+
+## 📁 Estructura del repositorio
+
+Una vista rápida de los archivos y carpetas principales:
+
+- `docs/` — Documentación complementaria (opcional)
+- `src/` — Código fuente o ejemplos (si aplica)
+- `exercises/` — Ejercicios y soluciones
+- `assets/` — Imágenes y recursos estáticos
+- `readme.md` — Este archivo
+
+> Si alguna carpeta falta, añádela según tus necesidades.
+
+## 🛠️ Instalación
+
+Pasos rápidos para preparar el entorno (ejemplo genérico):
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/CLASES-G1.git
+cd CLASES-G1
+
+# Crear entorno (ejemplo Python)
+python -m venv .venv
+source .venv/bin/activate  # Windows: .\.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Adapta los comandos según el lenguaje y herramientas que uses.
+
+---
+
+## 4. Funciones tradicionales (JavaScript)
+
+Las funciones tradicionales (declaradas con la palabra clave `function`) son una forma clásica de encapsular lógica en JavaScript. A continuación se muestra una explicación clara y un ejemplo profesional para un caso real (cálculo de totales en un e‑commerce).
+
+### ¿Qué veremos?
+
+- Validación de parámetros
+- Cálculo de subtotal, descuento e impuestos
+- Ejemplos de uso
+
+### Ejemplo: `calcularTotalPedido`
+
+```js
+/**
+ * Calcula el precio total de un pedido, aplicando descuento e impuesto.
+ * @param {Array<Object>} productos - Array de objetos con { id, nombre, precio, cantidad }
+ * @param {number} [descuentoPorcentaje=0] - Porcentaje de descuento (ej. 10)
+ * @param {number} [impuestoPorcentaje=0] - Porcentaje de impuesto (ej. 16)
+ * @returns {number} Total final (0 si no hay productos válidos)
+ */
+function calcularTotalPedido(productos, descuentoPorcentaje = 0, impuestoPorcentaje = 0) {
+  if (!Array.isArray(productos) || productos.length === 0) return 0;
+
+  let subtotal = 0;
+
+  for (const producto of productos) {
+    if (producto && typeof producto.precio === 'number' && typeof producto.cantidad === 'number') {
+      subtotal += producto.precio * producto.cantidad;
+    } else {
+      console.warn('Producto inválido encontrado y omitido:', producto);
+    }
+  }
+
+  const descuento = Math.max(0, Number(descuentoPorcentaje) || 0);
+  const montoDescuento = subtotal * (descuento / 100);
+  const subtotalConDescuento = subtotal - montoDescuento;
+
+  const impuesto = Math.max(0, Number(impuestoPorcentaje) || 0);
+  const montoImpuesto = subtotalConDescuento * (impuesto / 100);
+
+  return subtotalConDescuento + montoImpuesto;
+}
+
+// Ejemplos de uso
+const listaDeProductos1 = [
+  { id: 'p001', nombre: 'Laptop Gamer', precio: 1200, cantidad: 1 },
+  { id: 'p002', nombre: 'Teclado Mecánico', precio: 150, cantidad: 2 },
+  { id: 'p003', nombre: 'Mouse RGB', precio: 50, cantidad: 1 }
+];
+
+console.log(calcularTotalPedido(listaDeProductos1)); // 1550.00
+console.log(calcularTotalPedido(listaDeProductos1, 10, 16)); // 1618.20
+```
+
+---
+
+## 5. Errores comunes al trabajar con funciones tradicionales
+
+1. Olvidar los paréntesis `()` al definir o llamar
+
+   - Error: `function miFuncion { ... }` o `console.log(miFuncion);` (sin paréntesis)
+   - Solución: usar `function miFuncion() { ... }` y `miFuncion()` para invocar.
+
+2. No usar `return` cuando se espera un valor
+
+   ```js
+   function sumar(a, b) {
+     const suma = a + b;
+     // falta `return suma;`
+   }
+   ```
+
+   - Resultado: la llamada devuelve `undefined`.
+
+3. Alcance (scope) de variables
+
+   - Las variables declaradas con `let`/`const` dentro de una función son locales.
+   - Para usar un valor fuera, devuelve con `return`.
+
+4. `this` dinámico en funciones tradicionales
+
+   - En callbacks y temporizadores el valor de `this` puede perder el contexto.
+   - Alternativas: `const self = this;` o usar funciones flecha para heredar `this` léxico.
+
+5. Tipos y número de argumentos
+
+   - Validar parámetros o usar TypeScript para evitar `NaN` y errores lógicos.
+
+---
+
+Si quieres, puedo:
+
+- Añadir más ejemplos (tests unitarios, casos límite).
+- Convertir este ejemplo a TypeScript.
+- Extraer utilidades (validadores) y añadir un `README` por carpeta `src/`.
 4. Funciones Tradicionales
 JS / React / Node
 ¡Claro que sí! Como tu Mentor de Programación Senior, te guiaré a través de las "Funciones Tradicionales" en JavaScript, un pilar fundamental en cualquier aplicación que construyas con JS, React o Node. Prepárate para una explicación profunda y clara.
