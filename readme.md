@@ -1,6 +1,96 @@
 4. Funciones Tradicionales
 JS / React / Node
 ¡Claro que sí! Como tu Mentor de Programación Senior, te guiaré a través de las "Funciones Tradicionales" en JavaScript, un pilar fundamental en cualquier aplicación que construyas con JS, React o Node. Prepárate para una explicación profunda y clara.
+# 🎓 CLASES-G1
+
+Bienvenido al repositorio **CLASES-G1** — un espacio para organizar materiales, ejercicios y recursos de la asignatura.
+
+---
+
+## 📌 Descripción
+
+Resumen corto y útil del proyecto. Coloca aquí el propósito del repositorio, por ejemplo:
+
+- Material de clases y ejercicios.
+- Recursos y apuntes por temática.
+- Plantillas y ejemplos para prácticas.
+
+## 🚦 Estado
+
+- Estado: **En desarrollo**
+- Última actualización: 2025-12-14
+
+## 📁 Estructura del repositorio
+
+Una vista rápida de los archivos y carpetas principales:
+
+- `docs/` — Documentación complementaria (opcional)
+- `src/` — Código fuente o ejemplos (si aplica)
+- `exercises/` — Ejercicios y soluciones
+- `assets/` — Imágenes y recursos estáticos
+- `readme.md` — Este archivo
+
+> Si alguna carpeta falta, añádela según tus necesidades.
+
+## ⚙️ Requisitos
+
+Indica aquí las dependencias o requisitos del proyecto (lenguajes, versiones, librerías). Ejemplo genérico:
+
+- Python 3.8+ o Node.js 14+
+- Paquetes: lista en `requirements.txt` o `package.json`
+
+Si no hay requisitos, reemplaza esta sección por "Ninguno".
+
+## 🛠️ Instalación
+
+Pasos rápidos para preparar el entorno (ejemplo genérico):
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/CLASES-G1.git
+cd CLASES-G1
+
+# Crear entorno (ejemplo Python)
+python -m venv .venv
+source .venv/bin/activate  # Windows: .\.venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+Adapta los comandos según el lenguaje y herramientas que uses.
+
+## ▶️ Uso
+
+Explica cómo ejecutar ejemplos o abrir materiales. Ejemplos:
+
+```bash
+# Ejecutar un script de ejemplo (Python)
+python src/ejemplo.py
+
+# Abrir un cuaderno Jupyter
+jupyter notebook
+```
+
+## 🤝 Contribuir
+
+1. Haz un fork del repositorio.
+2. Crea una rama: `git checkout -b feature/nombre`
+3. Añade cambios y pruebas.
+4. Envía un Pull Request describiendo tus cambios.
+
+Por favor, mantén las contribuciones ordenadas y con commits claros.
+
+## 📝 Buenas prácticas para commits
+
+- Mensajes claros y en español/inglés según convención.
+- Un cambio lógico por commit.
+
+## 📬 Contacto
+
+Si tienes preguntas o sugerencias, abre un *issue* o contacta al autor.
+
+---
+
+¿Quieres que incluya secciones específicas (diapositivas, calendario, rúbrica)? Indícame y lo añado.
 
 
 ---
