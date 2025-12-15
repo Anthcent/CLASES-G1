@@ -6,6 +6,79 @@ Bienvenido al repositorio **CLASES-G1** — un espacio para organizar materiales
 
 ## 📌 Descripción
 
+Material de clase, ejercicios y ejemplos prácticos organizados por tema.
+
+---
+
+## 4. Funciones tradicionales (JavaScript)
+
+Las funciones tradicionales (declaradas con `function`) siguen siendo útiles en muchas situaciones. A continuación tienes una explicación breve y un ejemplo profesional, formateado para que se vea bien en GitHub.
+
+### Ejemplo: `calcularTotalPedido`
+
+```js
+/**
+ * Calcula el precio total de un pedido, aplicando descuento e impuesto.
+ * @param {Array<Object>} productos - Array de objetos: { id, nombre, precio, cantidad }
+ * @param {number} [descuentoPorcentaje=0] - Porcentaje de descuento (ej. 10)
+ * @param {number} [impuestoPorcentaje=0] - Porcentaje de impuesto (ej. 16)
+ * @returns {number} Total final (0 si no hay productos válidos)
+ */
+function calcularTotalPedido(productos, descuentoPorcentaje = 0, impuestoPorcentaje = 0) {
+  if (!Array.isArray(productos) || productos.length === 0) return 0;
+
+  let subtotal = 0;
+
+  for (const producto of productos) {
+    if (producto && typeof producto.precio === 'number' && typeof producto.cantidad === 'number') {
+      subtotal += producto.precio * producto.cantidad;
+    } else {
+      console.warn('Producto inválido encontrado y omitido:', producto);
+    }
+  }
+
+  const descuento = Math.max(0, Number(descuentoPorcentaje) || 0);
+  const montoDescuento = subtotal * (descuento / 100);
+  const subtotalConDescuento = subtotal - montoDescuento;
+
+  const impuesto = Math.max(0, Number(impuestoPorcentaje) || 0);
+  const montoImpuesto = subtotalConDescuento * (impuesto / 100);
+
+  return subtotalConDescuento + montoImpuesto;
+}
+
+// Ejemplo rápido
+const listaDeProductos1 = [
+  { id: 'p001', nombre: 'Laptop Gamer', precio: 1200, cantidad: 1 },
+  { id: 'p002', nombre: 'Teclado Mecánico', precio: 150, cantidad: 2 },
+  { id: 'p003', nombre: 'Mouse RGB', precio: 50, cantidad: 1 }
+];
+
+console.log(calcularTotalPedido(listaDeProductos1)); // 1550.00
+console.log(calcularTotalPedido(listaDeProductos1, 10, 16)); // 1618.20
+```
+
+---
+
+## 5. Errores comunes
+
+- Olvidar los paréntesis `()` al definir o al llamar.
+- Olvidar `return` cuando se espera un valor (la función devuelve `undefined`).
+- Confundir el alcance (`scope`) de variables; `let`/`const` son locales a la función.
+- `this` puede cambiar según cómo se invoque la función; las arrow functions mantienen `this` léxico.
+- Llamar con tipos o número de argumentos incorrectos puede producir `NaN`.
+
+---
+
+Si quieres un estilo visual concreto (por ejemplo, más emojis, un índice al inicio, o secciones plegables), dime y lo adapto.
+# 🎓 CLASES-G1
+
+Bienvenido al repositorio **CLASES-G1** — un espacio para organizar materiales, ejercicios y recursos de la asignatura.
+
+---
+
+## 📌 Descripción
+
 Resumen corto y útil del proyecto. Coloca aquí el propósito del repositorio, por ejemplo:
 
 - Material de clases y ejercicios.
